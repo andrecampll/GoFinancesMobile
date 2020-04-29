@@ -46,6 +46,32 @@ export const BalanceDate = styled.Text`
   color: #969cb3;
 `;
 
+export const CardTotal = styled.View`
+  background: #ff872c;
+  border-radius: 5px;
+  width: 310px;
+  height: 200px;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 19px 23px 50px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+`;
+
+export const CardTitleTotal = styled.Text`
+  font-size: 16px;
+  color: #fff;
+`;
+export const CardValueTotal = styled.Text`
+  font-size: 30px;
+  color: #fff;
+`;
+export const BalanceDateTotal = styled.Text`
+  font-size: 12px;
+  color: #fff;
+`;
+
 export const AreaInfo = styled.Text`
   font-size: 20px;
 `;
@@ -84,6 +110,7 @@ export const TransactionsList = styled(FlatList)`
 export const BalanceList = styled(FlatList)`
   position: relative;
   top: 15%;
-  width: 100%;
+  width: 94%;
   height: 100%;
+  padding-right: 15px;
 `;

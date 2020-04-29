@@ -22,10 +22,14 @@ import {
   CategoryArea,
   TransactionsList,
   BalanceList,
+  BalanceDateTotal,
+  CardTitleTotal,
+  CardTotal,
+  CardValueTotal,
 } from './styles';
 
 const Dashboard: React.FC = () => {
-  const array = [1, 2, 3];
+  const array = [1];
 
   return (
     <>
@@ -38,18 +42,44 @@ const Dashboard: React.FC = () => {
           data={array}
           keyExtractor={(array) => array}
           renderItem={() => (
-            <Card>
-              <Content>
-                <CardTitle>Entradas</CardTitle>
+            <>
+              <Card>
+                <Content>
+                  <CardTitle>Entradas</CardTitle>
 
-                <BalanceInfo>
-                  <CardValue>R$ 17.400,00</CardValue>
-                  <BalanceDate>Última entrada dia 13 de abril</BalanceDate>
-                </BalanceInfo>
-              </Content>
+                  <BalanceInfo>
+                    <CardValue>R$ 17.400,00</CardValue>
+                    <BalanceDate>Última entrada: dia 13 de abril</BalanceDate>
+                  </BalanceInfo>
+                </Content>
 
-              <Feather name="arrow-up-circle" size={40} color="#12A454" />
-            </Card>
+                <Feather name="arrow-up-circle" size={40} color="#12A454" />
+              </Card>
+              <Card>
+                <Content>
+                  <CardTitle>Saídas</CardTitle>
+
+                  <BalanceInfo>
+                    <CardValue>R$ 1.400,00</CardValue>
+                    <BalanceDate>Última saída: dia 10 de abril</BalanceDate>
+                  </BalanceInfo>
+                </Content>
+
+                <Feather name="arrow-down-circle" size={40} color="#f22" />
+              </Card>
+              <CardTotal>
+                <Content>
+                  <CardTitleTotal>Total</CardTitleTotal>
+
+                  <BalanceInfo>
+                    <CardValueTotal>R$ 100.400,00</CardValueTotal>
+                    <BalanceDateTotal>01 a 13 de abril</BalanceDateTotal>
+                  </BalanceInfo>
+                </Content>
+
+                <Feather name="dollar-sign" size={40} color="#fff" />
+              </CardTotal>
+            </>
           )}
         />
       </UpperContainer>
