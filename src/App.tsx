@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <View style={{backgroundColor: '#312e38', flex: 1}}>
       <NavigationContainer>
-        <StatusBar barStyle="dark-content" backgroundColor="#000" />
+        <StatusBar barStyle="dark-content" backgroundColor="#5636d3" />
         <Routes />
       </NavigationContainer>
     </View>
