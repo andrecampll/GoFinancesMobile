@@ -1,10 +1,11 @@
-# GoFinances 💸
+# GoFinances Mobile 💸
 Este repositório é referente ao projeto mobile da iniciativa GoFinances, desenvolvido dentro Bootcamp GoStack 11.0, da Rocketseat 🚀. <br />
 Versão Web: https://github.com/andrecampll/GoFinancesWeb
 
 # Proposta
-Este projeto é uma aplicação desenvolvida para controle financeiro, provendo ao usuário todas as informações referentes aos seus gastos e
-ganhos ao longo do tempo.
+Este projeto é uma aplicação desenvolvida para controle financeiro que provê ao usuário
+todas as informações sobre suas transações financeiras, mostrando seus gastos e
+ganhos ao longo do tempo. Esta versão mobile conta com a funcionalidade de adição de transações manualmente.
 
 # Tecnologias Utilizadas
 React ⚛️ <br />
