@@ -1,5 +1,5 @@
 # GoFinances 💸
-Este repositório é referente ao projeto mobile da iniciativa GoFinances, desenvolvido dentro Bootcamp GoStack 11.0, da Rocketseat 🚀.
+Este repositório é referente ao projeto mobile da iniciativa GoFinances, desenvolvido dentro Bootcamp GoStack 11.0, da Rocketseat 🚀. <br />
 Versão Web: https://github.com/andrecampll/GoFinancesWeb
 
 # Proposta
