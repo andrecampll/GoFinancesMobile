@@ -10,7 +10,7 @@ export const Container = styled.View`
 
 export const Logo = styled.Image``;
 
-export const Date = styled.Text`
+export const Day = styled.Text`
   color: #fff;
   font-size: 16px;
   opacity: 0.6;

@@ -175,7 +175,13 @@ const Dashboard: React.FC = () => {
 
               <CategoryArea>
                 <Divider>
-                  <Feather name="dollar-sign" size={20} color="#969cb3" />
+                  <Feather
+                    name={
+                      item.category.title === 'Amor' ? 'heart' : 'dollar-sign'
+                    }
+                    size={20}
+                    color="#969cb3"
+                  />
                   <TransactionCategory>
                     {item.category.title}
                   </TransactionCategory>
