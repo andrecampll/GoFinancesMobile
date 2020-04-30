@@ -1,22 +1,30 @@
-import React from 'react';
+import React, {useCallback, useRef} from 'react';
 
 import Feather from 'react-native-vector-icons/Feather';
 
+import {Form} from '@unform/mobile';
+import {FormHandles} from '@unform/core';
+
 import Header from '../../components/Header';
+import TextInput from '../../components/Input';
+import Button from '../../components/Button';
 
 import {
   Container,
   UpperContainer,
   AreaInfo,
-  TextInput,
   ActionArea,
   Action,
   ActionText,
-  Button,
-  ButtonText,
 } from './styles';
 
 const Dashboard: React.FC = () => {
+  const formRef = useRef<FormHandles>(null);
+
+  const handleSignIn = useCallback((data: object) => {
+    console.log(data);
+  }, []);
+
   return (
     <>
       <UpperContainer>
@@ -25,27 +33,35 @@ const Dashboard: React.FC = () => {
       <Container>
         <AreaInfo>Cadastro</AreaInfo>
 
-        <TextInput placeholder="Nome" />
+        <Form ref={formRef} onSubmit={handleSignIn}>
+          <TextInput name="name" placeholder="Nome" />
 
-        <TextInput placeholder="Valor" />
+          <TextInput
+            name="value"
+            placeholder="Valor"
+            keyboardType="number-pad"
+          />
 
-        <ActionArea>
-          <Action>
-            <Feather name="arrow-up-circle" size={20} color="#12A454" />
-            <ActionText>Income</ActionText>
-          </Action>
+          <ActionArea>
+            <Action>
+              <Feather name="arrow-up-circle" size={20} color="#12A454" />
+              <ActionText>Income</ActionText>
+            </Action>
 
-          <Action>
-            <Feather name="arrow-down-circle" size={20} color="#f22" />
-            <ActionText>Outcome</ActionText>
-          </Action>
-        </ActionArea>
+            <Action>
+              <Feather name="arrow-down-circle" size={20} color="#f22" />
+              <ActionText>Outcome</ActionText>
+            </Action>
+          </ActionArea>
 
-        <TextInput placeholder="Categoria" />
+          <TextInput name="category" placeholder="Categoria" />
 
-        <Button>
-          <ButtonText>Enviar</ButtonText>
-        </Button>
+          <Button
+            onPress={() => {
+              formRef.current?.submitForm();
+            }}
+          />
+        </Form>
       </Container>
     </>
   );

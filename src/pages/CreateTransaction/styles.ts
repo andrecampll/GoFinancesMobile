@@ -19,12 +19,6 @@ export const AreaInfo = styled.Text`
   padding-bottom: 20px;
 `;
 
-export const TextInput = styled.TextInput`
-  background: #fff;
-  border-radius: 5px;
-  padding-left: 16px;
-  margin-bottom: 16px;
-`;
 export const ActionArea = styled.View`
   flex-direction: row;
   justify-content: space-between;
@@ -45,15 +39,4 @@ export const ActionText = styled.Text`
   font-size: 14px;
   color: #363f5f;
   margin-left: 5px;
-`;
-export const Button = styled.TouchableOpacity`
-  background: #ff872c;
-  height: 50px;
-  border-radius: 5px;
-  justify-content: center;
-  align-items: center;
-`;
-export const ButtonText = styled.Text`
-  color: #fff;
-  font-size: 15px;
 `;
