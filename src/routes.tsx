@@ -11,13 +11,16 @@ const Tab = createMaterialBottomTabNavigator();
 
 const Routes: React.FC = () => {
   return (
-    <Tab.Navigator barStyle={{backgroundColor: '#fff'}}>
+    <Tab.Navigator
+      activeColor="#ff872c"
+      inactiveColor="#000"
+      barStyle={{backgroundColor: '#fff'}}>
       <Tab.Screen
         name="Listagem"
         component={Dashboard}
         options={{
-          tabBarIcon: (props: {focused: true; color: '#000'}) => (
-            <Icon name="format-list-bulleted" size={20} />
+          tabBarIcon: (props: {focused: false; color: '#ff872c'}) => (
+            <Icon name="format-list-bulleted" size={20} color={props.color} />
           ),
         }}
       />
@@ -26,7 +29,7 @@ const Routes: React.FC = () => {
         component={CreateTransaction}
         options={{
           tabBarIcon: (props: {focused: true; color: '#000'}) => (
-            <Feather name="dollar-sign" size={20} />
+            <Feather name="dollar-sign" size={20} color={props.color} />
           ),
         }}
       />

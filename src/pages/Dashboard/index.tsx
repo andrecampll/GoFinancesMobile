@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 
 import Feather from 'react-native-vector-icons/Feather';
 
@@ -32,6 +32,8 @@ import {
   CardTotal,
   CardValueTotal,
   Divider,
+  AreaDivider,
+  RefreshList,
 } from './styles';
 
 interface Transaction {
@@ -103,6 +105,28 @@ const Dashboard: React.FC = () => {
     loadTransactions();
   }, []);
 
+  const Refresh = useCallback(async () => {
+    const response = await api.get('/transactions');
+
+    const transactionsResponse: Transaction[] = response.data.transactions;
+
+    transactionsResponse.map((transaction: Transaction) => {
+      transaction.formattedDate = formatDate(transaction.created_at);
+      transaction.formattedValue = formatValue(transaction.value);
+    });
+
+    const balanceResponse: Balance = response.data.balance;
+
+    const data: Balance = {
+      income: formatValue(balanceResponse.income),
+      outcome: formatValue(balanceResponse.outcome),
+      total: formatValue(balanceResponse.total),
+    };
+
+    setTransactions(transactionsResponse);
+    setBalance(data);
+  }, []);
+
   return (
     <>
       <UpperContainer>
@@ -159,7 +183,12 @@ const Dashboard: React.FC = () => {
         />
       </UpperContainer>
       <Container>
-        <AreaInfo>Listagem</AreaInfo>
+        <AreaDivider>
+          <AreaInfo>Listagem</AreaInfo>
+          <RefreshList onPress={Refresh}>
+            <Feather name="rotate-ccw" size={20} />
+          </RefreshList>
+        </AreaDivider>
 
         <TransactionsList
           data={transactions}

@@ -79,7 +79,7 @@ export const BalanceDateTotal = styled.Text`
 export const AreaInfo = styled.Text`
   font-size: 20px;
 `;
-export const TransactionCard = styled.View`
+export const TransactionCard = styled.TouchableOpacity`
   background: #fff;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -121,4 +121,13 @@ export const BalanceList = styled(FlatList)`
 
 export const Divider = styled.View`
   flex-direction: row;
+`;
+
+export const AreaDivider = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+export const RefreshList = styled.TouchableOpacity`
+  padding-left: 10px;
 `;
