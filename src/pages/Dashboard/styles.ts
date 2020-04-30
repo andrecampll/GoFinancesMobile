@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 import {FlatList} from 'react-native-gesture-handler';
 
+interface Props {
+  type: 'income' | 'outcome';
+}
+
 export const Container = styled.View`
   background: transparent;
   padding: 0px 25px;
@@ -24,7 +28,7 @@ export const Card = styled.View`
   flex-direction: row;
   justify-content: space-between;
   padding: 19px 23px 50px;
-  margin-right: 5px;
+  margin-right: 3px;
   margin-bottom: 10px;
 `;
 
@@ -85,21 +89,21 @@ export const TransactionTitle = styled.Text`
   font-size: 14px;
   color: #363f5f;
 `;
-export const TransactionValue = styled.Text`
-  color: #12a454;
+export const TransactionValue = styled.Text<Props>`
+  color: ${(props) => (props.type === 'income' ? '#12a454' : '#f22')};
   font-size: 20px;
 `;
 export const TransactionCategory = styled.Text`
-  margin-left: 17px;
+  margin-left: 10px;
   color: #969cb3;
 `;
 export const TransactionDate = styled.Text`
-  margin-left: 40%;
   color: #969cb3;
 `;
 export const CategoryArea = styled.View`
   margin-top: 19px;
   flex-direction: row;
+  justify-content: space-between;
 `;
 export const TransactionsList = styled(FlatList)`
   margin-top: 10px;
@@ -113,4 +117,8 @@ export const BalanceList = styled(FlatList)`
   width: 94%;
   height: 100%;
   padding-right: 15px;
+`;
+
+export const Divider = styled.View`
+  flex-direction: row;
 `;
