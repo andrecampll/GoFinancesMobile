@@ -6,6 +6,7 @@ import Feather from 'react-native-vector-icons/Feather';
 
 import Dashboard from './pages/Dashboard';
 import CreateTransaction from './pages/CreateTransaction';
+import Settings from './pages/Settings';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -30,6 +31,15 @@ const Routes: React.FC = () => {
         options={{
           tabBarIcon: (props: {focused: true; color: '#000'}) => (
             <Feather name="dollar-sign" size={20} color={props.color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Opções"
+        component={Settings}
+        options={{
+          tabBarIcon: (props: {focused: true; color: '#000'}) => (
+            <Feather name="settings" size={20} color={props.color} />
           ),
         }}
       />

@@ -6,6 +6,7 @@ export const Container = styled.View`
   justify-content: space-between;
   padding-top: 20px;
   padding-right: 25px;
+  background-color: #5636d3;
 `;
 
 export const Logo = styled.Image``;
