@@ -1,9 +1,9 @@
 import React from 'react';
-import {Switch} from 'react-native';
 
 import Header from '../../components/Header';
+import ThemeSwitcher from '../../components/ThemeSwitcher';
 
-import {UpperContainer, Container, OptionArea, OptionTitle} from './styles';
+import {UpperContainer, Container} from './styles';
 
 const Settings: React.FC = () => {
   return (
@@ -12,10 +12,7 @@ const Settings: React.FC = () => {
         <Header />
       </UpperContainer>
       <Container>
-        <OptionArea>
-          <OptionTitle>Tema Dark</OptionTitle>
-          <Switch />
-        </OptionArea>
+        <ThemeSwitcher />
       </Container>
     </>
   );

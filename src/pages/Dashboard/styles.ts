@@ -6,17 +6,19 @@ interface Props {
 }
 
 export const Container = styled.View`
-  background: transparent;
+  background: ${(props) => props.theme.colors.primary};
   padding: 0px 25px;
   height: 100%;
   padding-bottom: 90%;
+  padding-top: 20%;
+  position: relative;
+  z-index: -1;
 `;
 
 export const UpperContainer = styled.View`
   background: #5636d3;
   height: 45%;
   padding: 0 0 0 25px;
-  margin-bottom: 20%;
 `;
 
 export const Card = styled.View`
