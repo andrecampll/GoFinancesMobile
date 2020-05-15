@@ -8,6 +8,10 @@ import Dashboard from './pages/Dashboard';
 import CreateTransaction from './pages/CreateTransaction';
 import Settings from './pages/Settings';
 
+interface Props {
+  toggleTheme(): void;
+}
+
 const Tab = createMaterialBottomTabNavigator();
 
 const Routes: React.FC = () => {

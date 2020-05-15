@@ -32,6 +32,7 @@ export const Card = styled.View`
   padding: 19px 23px 50px;
   margin-right: 3px;
   margin-bottom: 10px;
+  z-index: 1;
 `;
 
 export const BalanceInfo = styled.View``;
