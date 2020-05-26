@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/src/assets/Logo@3x.png" />
+  <img src="LogoDark@3x.png" />
 </p>
 
 # GoFinances Mobile 💸
