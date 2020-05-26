@@ -23,7 +23,7 @@ React Navigation ⚛️ <br />
 Styled-Components 💅🏻 <br />
 Typescript ⌨️
 
-# # Como obter esse repositório? 🤔
+# Como obter esse repositório? 🤔
 ⚠️ Não se esqueça de clonar o backend e inicializá-lo (https://github.com/andrecampll/GoFinancesBackend) ⚠️
 
 Para obter esse projeto, siga os passos:
